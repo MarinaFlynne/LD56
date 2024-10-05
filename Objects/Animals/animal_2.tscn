@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://csrm17yh8nanh"]
+
+[ext_resource type="Texture2D" uid="uid://bnt28mth6qfbp" path="res://Sprites/AnimalTemp.png" id="1_5juer"]
+[ext_resource type="Script" path="res://Objects/Animals/animal_2.gd" id="1_bauuq"]
+
+[node name="Animal2" type="TextureButton"]
+offset_left = -33.0
+offset_top = -33.0
+offset_right = 31.0
+offset_bottom = 31.0
+script = ExtResource("1_bauuq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(33, 33)
+texture = ExtResource("1_5juer")
+
+[node name="BottomPoint" type="Node2D" parent="."]
+position = Vector2(33, 63)
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
